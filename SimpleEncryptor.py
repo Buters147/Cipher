@@ -25,6 +25,7 @@ e = {0: "a", 1: "b", 2: "c", 3: "d", 4: "e",
      46: "U", 47: "V", 48: "W", 49: "X", 50: "Y", 51: "Z"
      }
 
+#Number of key-value-pairs
 length = len(e)
 
 t = input("Enter your text here: ")

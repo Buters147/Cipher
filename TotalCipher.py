@@ -1,4 +1,6 @@
 
+import random
+
 #Dictionary: Letters to numbers
 d = {"a": 0, "b": 1, "c": 2, "d": 3, "e": 4,
      "f": 5, "g": 6, "h": 7, "i": 8, "j": 9,
@@ -25,6 +27,9 @@ e = {0: "a", 1: "b", 2: "c", 3: "d", 4: "e",
      45: "ä", 46: "ü", 47: "ö", 48: "'"
      }
 
+#Number of key-value-pairs
+length = len(e)
+
 #Definition of the encryption function:
 def encryption(message1):
     i = 0
@@ -46,9 +51,20 @@ h = int(len(l) / (len(d)+1))
 #print(len(t))
 #print(h)
 
+
+#Choose which kind of encryption you want!
+
+#Get a list of random numbers
+y = []
+for i in range(0, length):
+    x = random.randint(1, len(l))
+    y.append(x)
+#print(y)
+
 #Get a list of increasing numbers
 y = list(range(1, (len(d)+1)))*(h+1)
 #print(y)
+
 
 
 #Encryption
