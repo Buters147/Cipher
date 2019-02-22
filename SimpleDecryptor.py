@@ -136,4 +136,4 @@ while j < len(m):
 
 print("Decrypted Text: " + s)
 
-#input("Press Enter to terminate the program!")
+input("Press Enter to terminate the program!")
