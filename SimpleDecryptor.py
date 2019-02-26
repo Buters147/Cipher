@@ -33,7 +33,7 @@ l = list(t) #Conversion to a list
 #print(l)
 h = int(len(l) / (length+1))
 
-#Punctuation marks
+#Punctuation marks we want to eliminate for the simple cipher
 space = []
 question = []
 full_stop = []
@@ -45,6 +45,7 @@ open = []
 close = []
 hypen = []
 apostrohe = []
+one = []
 
 for i in range(len(l)):
     if l[i] == " ":
@@ -69,17 +70,23 @@ for i in range(len(l)):
         hypen.append(i)
     if l[i] == "'":
         apostrohe.append(i)
+    if l[i] == "1":
+        one.append(i)
 
+#List of positions for the punctuation marks
 general = []
+#List of punctuation marks
 unit = []
+
 for i in range(len(l)):
     if l[i] == " " or l[i] == "?" or l[i] == "." or l[i] == "," or l[i] == "!" or l[i] == ";" \
-            or l[i] == ":" or l[i] == "(" or l[i] == ")" or l[i] == "-" or l[i] == "'":
+            or l[i] == ":" or l[i] == "(" or l[i] == ")" or l[i] == "-" or l[i] == "'" \
+            or l[i] == "1":
         general.append(i)
         unit.append(l[i])
 
-#print(general)
-#print(unit)
+print(general)
+print(unit)
 
 for i in range(len(space)):
     l.remove(" ")
@@ -103,6 +110,8 @@ for i in range(len(hypen)):
     l.remove("-")
 for i in range(len(apostrohe)):
     l.remove("'")
+for i in range(len(one)):
+    l.remove("1")
 
 #print(l)
 

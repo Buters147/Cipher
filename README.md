@@ -1,3 +1,3 @@
 # Cipher
 
-This Repository contents some ideas for communication.
+This Repository contains some ideas for secret communication.
