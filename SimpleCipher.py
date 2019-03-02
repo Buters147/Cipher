@@ -1,6 +1,4 @@
 
-import random
-
 #Dictionary: Letters to numbers
 d = {"a": 0, "b": 1, "c": 2, "d": 3, "e": 4,
      "f": 5, "g": 6, "h": 7, "i": 8, "j": 9,
@@ -31,10 +29,11 @@ e = {0: "a", 1: "b", 2: "c", 3: "d", 4: "e",
 length = len(e)
 
 t = input("Enter your text here: ")
-l = list(t)
+l = list(t) #Conversion to a list
 #print(l)
 h = int(len(l) / (length+1))
 
+#Punctuation marks we want to eliminate for the simple cipher
 space = []
 question = []
 full_stop = []
@@ -46,6 +45,17 @@ open = []
 close = []
 hypen = []
 apostrohe = []
+quotation = []
+zero = []
+one = []
+two = []
+three = []
+four = []
+five = []
+six = []
+seven = []
+eight = []
+nine = []
 
 for i in range(len(l)):
     if l[i] == " ":
@@ -70,17 +80,45 @@ for i in range(len(l)):
         hypen.append(i)
     if l[i] == "'":
         apostrohe.append(i)
+    if l[i] == '"':
+        quotation.append(i)
+    if l[i] == "0":
+        zero.append(i)
+    if l[i] == "1":
+        one.append(i)
+    if l[i] == "2":
+        two.append(i)
+    if l[i] == "3":
+        three.append(i)
+    if l[i] == "4":
+        four.append(i)
+    if l[i] == "5":
+        five.append(i)
+    if l[i] == "6":
+        six.append(i)
+    if l[i] == "7":
+        seven.append(i)
+    if l[i] == "8":
+        eight.append(i)
+    if l[i] == "9":
+        nine.append(i)
 
+
+#List of positions for the punctuation marks
 general = []
+#List of punctuation marks
 unit = []
+
 for i in range(len(l)):
     if l[i] == " " or l[i] == "?" or l[i] == "." or l[i] == "," or l[i] == "!" or l[i] == ";" \
-            or l[i] == ":" or l[i] == "(" or l[i] == ")" or l[i] == "-" or l[i] == "'":
+            or l[i] == ":" or l[i] == "(" or l[i] == ")" or l[i] == "-" or l[i] == "'" or l[i] == '"' \
+            or l[i] == "0" or l[i] == "1" or l[i] == "2" or l[i] == "3" or l[i] == "4" or l[i] == "5" \
+            or l[i] == "6" or l[i] == "7" or l[i] == "8" or l[i] == "9":
         general.append(i)
         unit.append(l[i])
 
-print("Positions of non letters: " + str(general))
-print("Units of non letters: " + str(unit))
+print(general)
+print(unit)
 
 for i in range(len(space)):
     l.remove(" ")
@@ -104,6 +142,28 @@ for i in range(len(hypen)):
     l.remove("-")
 for i in range(len(apostrohe)):
     l.remove("'")
+for i in range(len(quotation)):
+    l.remove('"')
+for i in range(len(zero)):
+    l.remove("0")
+for i in range(len(one)):
+    l.remove("1")
+for i in range(len(two)):
+    l.remove("2")
+for i in range(len(three)):
+    l.remove("3")
+for i in range(len(four)):
+    l.remove("4")
+for i in range(len(five)):
+    l.remove("5")
+for i in range(len(six)):
+    l.remove("6")
+for i in range(len(seven)):
+    l.remove("7")
+for i in range(len(eight)):
+    l.remove("8")
+for i in range(len(nine)):
+    l.remove("9")
 
 #print(l)
 
@@ -144,6 +204,7 @@ l = list(s)
 #print(l)
 h = int(len(l) / (length+1))
 
+#Punctuation marks we want to eliminate for the simple cipher
 space = []
 question = []
 full_stop = []
@@ -155,6 +216,17 @@ open = []
 close = []
 hypen = []
 apostrohe = []
+quotation = []
+zero = []
+one = []
+two = []
+three = []
+four = []
+five = []
+six = []
+seven = []
+eight = []
+nine = []
 
 for i in range(len(l)):
     if l[i] == " ":
@@ -179,17 +251,45 @@ for i in range(len(l)):
         hypen.append(i)
     if l[i] == "'":
         apostrohe.append(i)
+    if l[i] == '"':
+        quotation.append(i)
+    if l[i] == "0":
+        zero.append(i)
+    if l[i] == "1":
+        one.append(i)
+    if l[i] == "2":
+        two.append(i)
+    if l[i] == "3":
+        three.append(i)
+    if l[i] == "4":
+        four.append(i)
+    if l[i] == "5":
+        five.append(i)
+    if l[i] == "6":
+        six.append(i)
+    if l[i] == "7":
+        seven.append(i)
+    if l[i] == "8":
+        eight.append(i)
+    if l[i] == "9":
+        nine.append(i)
 
+
+#List of positions for the punctuation marks
 general = []
+#List of punctuation marks
 unit = []
+
 for i in range(len(l)):
     if l[i] == " " or l[i] == "?" or l[i] == "." or l[i] == "," or l[i] == "!" or l[i] == ";" \
-            or l[i] == ":" or l[i] == "(" or l[i] == ")" or l[i] == "-" or l[i] == "'":
+            or l[i] == ":" or l[i] == "(" or l[i] == ")" or l[i] == "-" or l[i] == "'" or l[i] == '"' \
+            or l[i] == "0" or l[i] == "1" or l[i] == "2" or l[i] == "3" or l[i] == "4" or l[i] == "5" \
+            or l[i] == "6" or l[i] == "7" or l[i] == "8" or l[i] == "9":
         general.append(i)
         unit.append(l[i])
 
-#print(general)
-#print(unit)
+print(general)
+print(unit)
 
 for i in range(len(space)):
     l.remove(" ")
@@ -213,8 +313,28 @@ for i in range(len(hypen)):
     l.remove("-")
 for i in range(len(apostrohe)):
     l.remove("'")
-
-#print(l)
+for i in range(len(quotation)):
+    l.remove('"')
+for i in range(len(zero)):
+    l.remove("0")
+for i in range(len(one)):
+    l.remove("1")
+for i in range(len(two)):
+    l.remove("2")
+for i in range(len(three)):
+    l.remove("3")
+for i in range(len(four)):
+    l.remove("4")
+for i in range(len(five)):
+    l.remove("5")
+for i in range(len(six)):
+    l.remove("6")
+for i in range(len(seven)):
+    l.remove("7")
+for i in range(len(eight)):
+    l.remove("8")
+for i in range(len(nine)):
+    l.remove("9")
 
 #Get a list of decryption numbers
 y = []
